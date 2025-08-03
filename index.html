@@ -39,20 +39,40 @@
         </button>
       </div>
 
-      <!-- Category Filter -->
+      <!-- Category Filter and Search -->
       <div class="search-section">
-        <select id="categoryFilter">
-          <option value="" disabled selected>Choose a Category</option>
-          <option value="cleanser">Cleansers</option>
-          <option value="moisturizer">Moisturizers & Treatments</option>
-          <option value="haircare">Haircare</option>
-          <option value="makeup">Makeup</option>
-          <option value="hair color">Hair Color</option>
-          <option value="hair styling">Hair Styling</option>
-          <option value="men's grooming">Men's Grooming</option>
-          <option value="suncare">Suncare</option>
-          <option value="fragrance">Fragrance</option>
-        </select>
+        <div class="filter-controls">
+          <select id="categoryFilter">
+            <option value="" disabled selected>Choose a Category</option>
+            <option value="cleanser">Cleansers</option>
+            <option value="moisturizer">Moisturizers & Treatments</option>
+            <option value="haircare">Haircare</option>
+            <option value="makeup">Makeup</option>
+            <option value="hair color">Hair Color</option>
+            <option value="hair styling">Hair Styling</option>
+            <option value="men's grooming">Men's Grooming</option>
+            <option value="suncare">Suncare</option>
+            <option value="fragrance">Fragrance</option>
+          </select>
+          
+          <div class="search-input-container">
+            <input 
+              type="text" 
+              id="productSearch" 
+              placeholder="Search products by name or keyword..."
+              autocomplete="off"
+            />
+            <i class="fa-solid fa-search search-icon"></i>
+            <button id="clearSearch" class="clear-search-btn" style="display: none;">
+              <i class="fa-solid fa-times"></i>
+            </button>
+          </div>
+        </div>
+        
+        <div id="searchResults" class="search-results-info" style="display: none;">
+          <span id="resultsCount">0 products found</span>
+          <button id="clearAllFilters" class="clear-filters-btn">Clear All Filters</button>
+        </div>
       </div>
 
       <!-- Products Grid -->
